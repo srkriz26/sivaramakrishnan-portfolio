@@ -1,0 +1,213 @@
+// Auto-generated from profile.json
+window.ProfileData = {
+  "name": "Sivaramakrishnan Sankar",
+  "designation": "Senior Manager — Enterprise Program & Portfolio Management",
+  "tags": [
+    "Salesforce Commerce",
+    "Digital Experience",
+    "AI Governance",
+    "Agile & SAFe Delivery"
+  ],
+  "location": "Chennai & Bangalore",
+  "phone": "9841029077",
+  "email": "sivaramakrishnan.sankar@gmail.com",
+  "linkedin": "linkedin.com/in/sivaramakrishnan-sankar",
+  "photo": "assets/profile/sivaram.png",
+  "summary": "Senior Manager with 19 years across IT services and consulting, building the governance scaffolding — RAID, RACI, ways-of-working, SOWs — that turns ambiguous, multi-team programs into predictable delivery. Career arc runs from Quality Engineering, through enterprise implementation and client consulting, into Salesforce Commerce program and practice leadership — applying that same governance-first discipline more recently to enterprise AI adoption: knowing where AI earns its cost, and where it shouldn't be used at all.",
+  "counters": [
+    {
+      "value": 19,
+      "suffix": "+",
+      "label": "Years"
+    },
+    {
+      "value": 60,
+      "suffix": "+",
+      "label": "People Led"
+    },
+    {
+      "value": 1,
+      "prefix": "$",
+      "suffix": "B",
+      "label": "Program Scale"
+    },
+    {
+      "value": 0,
+      "display": "Fortune 500",
+      "label": "Clients"
+    }
+  ],
+  "qualifications": {
+    "education": [
+      {
+        "degree": "Bachelor's in Information Systems & Management",
+        "institution": "Chennai",
+        "year": "2004–2007"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Scrum Master",
+        "abbr": "CSM"
+      },
+      {
+        "name": "Certified Scrum Product Owner",
+        "abbr": "CSPO"
+      },
+      {
+        "name": "Advanced Certified Scrum Master",
+        "abbr": "A-CSM"
+      },
+      {
+        "name": "Scaled Agile Framework Agilist",
+        "abbr": "SAFe Agilist"
+      },
+      {
+        "name": "Scaled Agile Framework Scrum Master",
+        "abbr": "SAFe SM"
+      },
+      {
+        "name": "Project Management Professional (PMI Trained)",
+        "abbr": "PMI-PMP"
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "title": "Founding PM, $1B Omni-Channel Commerce Program",
+      "clientId": "currys",
+      "detail": "One of the 3–4 people who kickstarted a billion-dollar Salesforce Commerce Cloud program from zero — created the project charter, ran TA hiring, drafted the SOW, and stood up ways of working, RACI, and reporting before running scrum-of-scrums across 3–4 e-commerce teams.",
+      "stamps": [
+        "ROLE: Pioneer PM",
+        "SCOPE: 3–4 e-comm teams",
+        "GOVERNANCE: RACI, SOW, WoW"
+      ]
+    },
+    {
+      "title": "5 Production Upgrades, National Stock Exchange",
+      "clientId": "nse",
+      "detail": "Acted as SPOC senior consultant across a nine-upgrade, five-year engagement on one of India's most mission-critical financial platforms — planning, executing, and governing five of those upgrades directly with engineering, QA, and architecture.",
+      "stamps": [
+        "ROLE: SPOC Senior Consultant",
+        "SCOPE: 5 upgrades / 5 yrs",
+        "DOMAIN: Exchange Security"
+      ]
+    },
+    {
+      "title": "Cross-Continent Release Program — Valeo",
+      "clientId": "valeo",
+      "detail": "Coordinated releases across teams in Cairo, Paris, Bengaluru, and Chennai spanning three partner organizations as Program Release Manager. The engagement helped Valeo secure a billion-dollar deal with Audi — and the client formally felicitated the effort.",
+      "stamps": [
+        "ROLE: Program Release Manager",
+        "SCOPE: 4 cities, 3 orgs",
+        "OUTCOME: $1B Audi deal enabled"
+      ]
+    },
+    {
+      "title": "AI-Powered Route Optimization: 70% → 81%",
+      "detail": "Designed a phased, cost-governed AI adoption model for route validation — raising flagged-route accuracy from 70% to 81% while concentrating AI cost only where it earned its value.",
+      "stamps": [
+        "ROLE: AI Governance Lead",
+        "METRIC: +11pts accuracy",
+        "GOVERNANCE: Human review loop"
+      ]
+    },
+    {
+      "title": "SAFe Transformation Coaching — American Red Cross",
+      "clientId": "redcross",
+      "detail": "Streamlined the delivery team during the client's SAFe transition — ran SAFe training and mentored the team on SAFe ways of working, drawing on prior consulting-era governance experience.",
+      "stamps": [
+        "ROLE: Delivery Lead & SAFe Mentor",
+        "GOVERNANCE: SAFe Ways of Working"
+      ]
+    },
+    {
+      "title": "Reusable AI Agent Suite for Delivery Teams",
+      "detail": "Designed and shipped reusable AI agents for Meeting Intelligence, RAID Management, Knowledge Discovery, Delivery Governance, and Project Kickstart — now used across multiple delivery teams.",
+      "stamps": [
+        "ROLE: AI Governance Lead",
+        "SCOPE: 5+ agents shipped",
+        "TOOLS: Claude, Copilot"
+      ]
+    }
+  ],
+  "coreCompetencies": {
+    "Program & Portfolio Leadership": [
+      "Program Management",
+      "Portfolio Management",
+      "Team Management",
+      "Resource Planning",
+      "Executive & Stakeholder Communication",
+      "Delivery Governance",
+      "Operational Governance",
+      "Financial Management",
+      "Budgeting"
+    ],
+    "AI & Digital Transformation": [
+      "AI Solutions & Transformation",
+      "AI Agents",
+      "RAG",
+      "MCP",
+      "Agentic Workflows",
+      "Digital Commerce",
+      "Salesforce Commerce",
+      "Customer Experience",
+      "Digital Experience"
+    ],
+    "Delivery Excellence": [
+      "Agile",
+      "Scrum",
+      "SAFe",
+      "Iterative",
+      "Hybrid",
+      "SDLC",
+      "Engineering",
+      "RAID Management",
+      "Cross-functional Coordination"
+    ],
+    "Domain Experience": [
+      "Digital Commerce & Retail",
+      "SaaS",
+      "Banking & Financial Services",
+      "Automotive",
+      "Manufacturing"
+    ],
+    "Tools & Technology": [
+      "JIRA",
+      "Confluence",
+      "Azure DevOps",
+      "Azure Foundry",
+      "AWS",
+      "GIT",
+      "TeamForge",
+      "Claude AI",
+      "ChatGPT",
+      "Gemini",
+      "Codex",
+      "Salesforce Commerce Cloud",
+      "Salesforce CRM",
+      "Financial Cloud",
+      "Marketing Cloud",
+      "Agentforce",
+      "Data Cloud",
+      "OMS",
+      "Payments",
+      "Python",
+      "Java",
+      "MySQL",
+      "Postgres",
+      "HTML"
+    ]
+  },
+  "lookingFor": {
+    "heading": "If this is the problem you're hiring for",
+    "narrative": "Leading complex programs. Refining a practice. Overseeing delivery at scale. Or adding a leader who works directly with CXOs — if that's the gap, let's talk.",
+    "hashtags": [
+      "Program Manager",
+      "Delivery Manager",
+      "Director",
+      "Professional Services",
+      "Salesforce Commerce"
+    ]
+  }
+};

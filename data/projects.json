@@ -1,0 +1,156 @@
+{
+  "projects": [
+    {
+      "id": "route-intelligence",
+      "title": "Delivery Ledger & Last-Mile Intelligence",
+      "client": "Major Retail Client",
+      "tagline": "Ship the boring workflow problem first. Let AI earn its place after.",
+      "concept": {
+        "label": "Concept \u2014 Driver Delivery Ledger (V1)",
+        "note": "An independently developed product concept and functional specification \u2014 not a client deliverable.",
+        "problem": "Most large third-party logistics providers already have mature route-optimization tooling. The underserved gap \u2014 particularly for regional 3PLs, mid-size distributors, and in-house fleets \u2014 isn't smarter routing. It's the absence of a single, unified daily workflow for the driver, who works off paper lists, WhatsApp messages, and 3\u20134 disconnected apps with no single source of truth for their day.",
+        "approach": "Specified a lean V1: one unified driver ledger covering manifest access, in-app navigation, and proof-of-delivery capture \u2014 deliberately no optimization or dispatch intelligence in this phase. Manual drag-to-reorder sequencing, a driver-alert-and-accept flow for mid-day edits, and a mandatory cadence-based ops review of open entries before each new day.",
+        "philosophy": "Keep the system \u201cdumb\u201d wherever a human \u2014 ops or driver \u2014 can make a better judgment call than an algorithm. Avoid building for hypothetical future needs: no stored carry-over flags, no version history in V1. A workflow-consolidation problem, not a routing-algorithm problem \u2014 which makes it tractable to build first, and a natural on-ramp toward optimization later, once a customer already depends on the app daily.",
+        "infographic": "assets/diagrams/delivery-ledger-infographic.jpg"
+      },
+      "situation": "Multimodal AI analysis (satellite imagery + Gemini Vision) isn't commercially viable if you run it on every single route. For short-distance deliveries, the probability of hitting a truck-specific constraint is low — paying full AI cost there is waste, not intelligence.",
+      "decision": "We proposed a phased adoption model: AI-assisted route validation only for high-value scenarios — long-haul deliveries, large trucks, oversized shipments, or routes into unfamiliar locations. That let the client capture the value of AI validation while controlling token consumption and API cost.",
+      "governance": "AI supports the operational decision; it doesn't replace it. During initial rollout, any route flagged high-risk went to human review. That built trust in the recommendations, created a feedback loop to improve prompts and validation rules, and made sure business-critical deliveries never relied on AI alone.",
+      "infographic": "assets/diagrams/route-intelligence-infographic.jpg",
+      "flow": [
+        { "label": "Customer places shipment", "type": "start" },
+        { "label": "Google Routes API", "type": "step" },
+        { "label": "Truck Profile Assessment", "type": "step" },
+        { "label": "AI Decision Engine", "type": "decision" },
+        { "label": "Simple Route", "type": "branch-left", "next": "Normal Routing" },
+        { "label": "Complex Route", "type": "branch-right", "next": "Satellite + Gemini Vision" },
+        { "label": "Normal Routing", "type": "leaf-left" },
+        { "label": "Satellite + Gemini Vision", "type": "leaf-right", "mergesTo": "AI Validation" },
+        { "label": "AI Validation", "type": "step" },
+        { "label": "Human Review", "type": "step-governance" },
+        { "label": "Final Optimized Route", "type": "end" }
+      ],
+      "costOptimization": [
+        { "title": "Intelligent Triggering", "detail": "Gemini isn't invoked for every route. Business rules route only complex deliveries, oversized vehicles, or routes meeting risk criteria into AI analysis." },
+        { "title": "Progressive Analysis", "detail": "Start with the Routes API alone. Only escalate to satellite imagery and AI analysis if the route contains potentially risky segments or lacks sufficient metadata — avoiding unnecessary AI calls." },
+        { "title": "Human Oversight", "detail": "Dispatch teams reviewed AI-flagged routes initially. As confidence grew, the organization could gradually automate more decisions while retaining governance for exceptions." }
+      ],
+      "result": "Routing accuracy for flagged high-risk deliveries improved from 70% to 81%, with AI cost concentrated only where it earned its value.",
+      "learning": "Successful AI adoption isn't just about building an intelligent model — it's about deciding when to use AI, when not to, and putting governance around it so the business gets measurable value without unnecessary cost or operational risk. The Delivery Ledger concept applies the same discipline one step earlier: don't reach for AI at all until the foundational workflow problem is solved first.",
+      "featured": true
+    },
+    {
+      "id": "inventory-replenishment",
+      "title": "Inventory Replenishment",
+      "client": "Major Retail Client",
+      "tagline": "We built the GenAI version first. Production data told us to rebuild it.",
+      "situation": "Store and section managers manually reviewed sales reports to place warehouse replenishment orders. The client wanted Generative AI to make the process smarter — a conversational assistant a manager could ask, 'How many cartons of Brand A detergent should I order for next week?'",
+      "action": "We built a RAG-based assistant: an LLM grounded in enterprise data — recent sales trends, seasonal patterns, historical demand, current inventory, competing brands, and promotions — retrieved via a vector database and enterprise SQL, generating an order recommendation with supporting reasoning instead of a manager manually comparing spreadsheets.",
+      "complication": "The pilot worked functionally — managers liked the conversational experience and recommendations were accurate. But post-launch monitoring surfaced a problem: every recommendation required the LLM to process large volumes of historical sales and inventory data. As usage scaled across stores, token consumption grew fast enough that in some scenarios, monthly AI operating cost approached or exceeded the value of the inventory savings it generated.",
+      "reassessment": "Rather than defending the AI build because it was technically impressive, we stepped back. Inventory replenishment is fundamentally a prediction problem, not a reasoning problem — most recommendations could be generated with demand forecasting, time-series analysis, moving averages, seasonal indices, safety stock, and reorder-point calculations, no LLM required.",
+      "result": "We redesigned the architecture so a predictive engine generates replenishment quantities with business rules handling exceptions — removing continuous LLM calls from the critical path. AI was retained only for explainability and unusual, exception-driven inventory situations. Nearly identical business outcome, at dramatically lower operating cost and faster response time.",
+      "learning": "Not every intelligent solution needs Generative AI. The job isn't to maximize AI adoption — it's to maximize business value, and sometimes the best AI decision is knowing where AI shouldn't be used.",
+      "pipeline": [
+        "Sales History", "Warehouse Stock", "Demand Trends", "Competitor Sales", "Seasonality", "Safety Stock", "Predictive Analytics", "Suggested Replenishment", "Store Manager Review", "Purchase Order"
+      ],
+      "architectures": {
+        "genai": {
+          "label": "Original: RAG + GenAI",
+          "flow": ["Store Manager (natural language question)", "Web / Mobile App", "API Layer", "RAG Orchestrator", "Vector DB + Enterprise SQL (sales, inventory, orders, stock)", "LLM (Gemini / OpenAI / Azure OpenAI)", "Recommendation + Reasoning"],
+          "costDriver": "Every query: DB queries, vector retrieval, prompt construction, large context to the LLM, token generation for the response — across hundreds of stores and thousands of daily requests, this compounded fast."
+        },
+        "predictive": {
+          "label": "Redesigned: Predictive Analytics",
+          "flow": ["ERP / POS / Warehouse Data", "Data Processing", "Forecasting Engine (Time-series + Business Rules)", "Recommended Order Quantity", "Dashboard", "LLM used only for: Explain Why + Exceptions"],
+          "techniques": ["Rolling & weighted moving averages", "Trend & seasonal adjustment", "Reorder point calculation", "Safety stock & lead-time demand", "Min/max stock thresholds", "Promotion & new-product business rules"]
+        }
+      },
+      "comparison": [
+        { "dimension": "Interface", "ai": "Conversational", "predictive": "Dashboard / API" },
+        { "dimension": "Core logic", "ai": "LLM reasoning", "predictive": "Mathematical forecasting" },
+        { "dimension": "Operating cost", "ai": "High token cost", "predictive": "Negligible runtime cost" },
+        { "dimension": "Latency", "ai": "Slower", "predictive": "Near real-time" },
+        { "dimension": "ROI story", "ai": "Hard to justify cost", "predictive": "Easy to justify" }
+      ]
+    },
+    {
+      "id": "shopper-assistant",
+      "featured": true,
+      "title": "Shopper Assistant",
+      "client": "Salesforce Commerce (demoed at Salesforce events)",
+      "tagline": "Built and demoed before Agentforce Shopper existed.",
+      "situation": "Salesforce Commerce needed a conversational shopping agent that could operate directly against live commerce documentation and catalog data — not a static chatbot.",
+      "action": "We stood up a sandbox as an MCP server, infusing it with Salesforce Commerce Cloud documentation, then built a shopping assistant around it — capable of listing products, recommending based on natural-language questions, and retrieving order-related information. Every part of the flow except payment ran through the agent.",
+      "result": "Built and demoed at Salesforce events in early 2025 — ahead of Salesforce's own later Agentforce Shopper announcement.",
+      "journey": [
+        { "role": "user", "text": "I need a blue shirt under $50" },
+        { "role": "agent", "text": "AI Agent" },
+        { "role": "system", "text": "Search Catalog" },
+        { "role": "system", "text": "Compare Products" },
+        { "role": "agent", "text": "Personalized Recommendations" },
+        { "role": "system", "text": "Checkout" },
+        { "role": "system", "text": "Order Tracking" }
+      ]
+    },
+    {
+      "id": "pm-agents",
+      "title": "PM AI Agent Suite",
+      "client": "Internal — Delivery Teams",
+      "tagline": "Turning governance artifacts into agents, not just documents.",
+      "situation": "Program managers repeatedly produce the same governance artifacts by hand — meeting notes, RAID logs, ways-of-working documents, kickoff checklists. Built using Claude and Copilot as a reusable internal agent suite.",
+      "agents": [
+        {
+          "name": "Meeting Assistant",
+          "inputs": "Meeting recordings, transcripts, or Copilot summary extracts",
+          "prompt": "Convert this meeting extract into our standard meeting-notes template, preserving decisions, owners, and open items.",
+          "output": "Structured meeting notes in the team's standard template",
+          "value": "Removes manual note-taking overhead and keeps meeting records consistent across teams"
+        },
+        {
+          "name": "RAID Assistant",
+          "inputs": "Meeting notes + existing RAID log tracker",
+          "prompt": "From these notes, identify new RAID items, categorize them, and rank the top 3 by priority with a suggested workaround. Check them against the existing log's current items and health before appending.",
+          "output": "Categorized RAID items with top-3 priority + workaround, appended to the master tracker",
+          "value": "Keeps the RAID log current without a manual review pass after every meeting"
+        },
+        {
+          "name": "Ways of Working & SOP Creator",
+          "inputs": "Project type, team composition, existing practices",
+          "prompt": "Generate a ways-of-working document for this project covering RACI, JIRA process, branching strategy, code practices, testing expectations, and release/demo cadence.",
+          "output": "A tailored ways-of-working / SOP document",
+          "value": "Standardizes project setup and cuts down the time to get a new team aligned"
+        },
+        {
+          "name": "Project Kickstarter",
+          "inputs": "Project kickoff checklist + project details",
+          "prompt": "Verify this project's setup against our standard kickstart checklist and flag any gaps.",
+          "output": "A verification report against the kickstart checklist",
+          "value": "Ensures no project goes live with governance gaps in its foundation"
+        }
+      ],
+      "alsoIncludes": ["Knowledge Discovery", "Delivery Governance"],
+      "alsoIncludesNote": "The suite also spans knowledge-discovery and delivery-governance workflows referenced across the AI Governance portfolio."
+    },
+    {
+      "id": "financial-recommendation",
+      "featured": true,
+      "title": "Financial Product Recommendation Engine",
+      "client": "Financial Services Client",
+      "tagline": "A multi-cloud nervous system for one milestone-based recommendation.",
+      "situation": "A financial services client wanted customers to automatically receive relevant product and offering recommendations at key life or account milestones — grounded in each customer's actual history, not generic segmentation.",
+      "action": "The recommendation draws on a customer's transaction and investment history, credit score, and search/interest patterns, then automatically triggers a personalized product recommendation at the right milestone.",
+      "architecture": ["Financial Cloud (customer & product data)", "Data Cloud (unified customer profile & signals)", "Marketing Cloud (milestone trigger & delivery)", "Agentforce (recommendation orchestration)"],
+      "result": "Recommendations move from a manual, segment-based push model to an automatic, milestone-triggered, individually grounded one — powered by multi-cloud integration across the client's Salesforce estate.",
+      "learning": "The hard part of this kind of solution isn't the recommendation logic — it's getting Financial Cloud, Data Cloud, Marketing Cloud, and Agentforce to agree on a single customer view and trigger cleanly at the right moment."
+    },
+    {
+      "id": "headless-360",
+      "title": "Headless 360 Maturity Assessment",
+      "client": "Internal — Solution Architecture & Sales",
+      "tagline": "A reckoner for how ready a client really is to go headless.",
+      "situation": "Clients considering headless commerce architectures needed an objective way to assess their own readiness before committing to the investment.",
+      "action": "Collaborated with solution architects and the sales team to build a maturity-assessment reckoner — a structured framework for evaluating a client's headless-readiness across their commerce estate.",
+      "value": "Gives sales and architecture teams a shared, consistent tool to have an early, honest readiness conversation with prospective headless-commerce clients."
+    }
+  ]
+}

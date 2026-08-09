@@ -1,0 +1,213 @@
+// Auto-generated from clients.json
+window.ClientsData = {
+  "industries": [
+    {
+      "name": "Retail & Commerce",
+      "clients": [
+        "currys",
+        "saks",
+        "elizabeth-arden",
+        "mathis-brothers",
+        "aosmith",
+        "party-city",
+        "redcross"
+      ]
+    },
+    {
+      "name": "Banking & Financial Services",
+      "clients": [
+        "amex",
+        "deutsche-bank",
+        "bank-of-shanghai",
+        "nse"
+      ]
+    },
+    {
+      "name": "Manufacturing & Automotive",
+      "clients": [
+        "valeo"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "currys",
+      "name": "Currys Retail",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "E-Commerce Manager & Delivery Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud",
+        "Salesforce OMS",
+        "Salesforce Service Cloud",
+        "Salesforce Marketing Cloud",
+        "MuleSoft",
+        "Amplience",
+        "Digital Experience"
+      ],
+      "challenge": "Standing up a premium retail omni-channel commerce program from a blank sheet — before there was a team, a backlog, or a delivery structure to coordinate.",
+      "phases": [
+        {
+          "label": "Program Setup — Founding PM",
+          "detail": "Owned the SOW from assignment through signature — directed drafting (with BA support, benchmarked against similar engagements), refined it with the Program Director to Mindtree's standards, then negotiated it to final with the client. Convened architects to break high-level journeys into epics and validate estimates, then finalized scope with client and program leadership. Partnered with Talent Acquisition to stand up the delivery organization — 200+ roles across teams. Worked with program leadership and the client to establish governance from scratch: team structure, RACI, delivery cadence, release structure, tooling, and communication rhythm. Formed and headed Scrum of Scrums for Mindtree — working with the client Program Leader to set up cadence, ceremonies, timelines, and required artifacts."
+        },
+        {
+          "label": "Delivery Leadership",
+          "detail": "Led e-commerce implementation, governance, and executive reporting through delivery, running the Scrum of Scrums forward through execution."
+        }
+      ]
+    },
+    {
+      "id": "saks",
+      "name": "SAKS Global",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "Program Governance Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud",
+        "Digital Experience"
+      ],
+      "challenge": "Coordinating multi-stream commerce delivery for a premium retail portfolio.",
+      "contribution": "Leads program governance, executive reporting, and cross-functional coordination across the engagement."
+    },
+    {
+      "id": "elizabeth-arden",
+      "name": "Elizabeth Arden",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "Program Governance Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud"
+      ],
+      "challenge": "Maintaining consistent delivery predictability across a global beauty & fragrance commerce platform.",
+      "contribution": "Oversees delivery governance and resource planning as part of the managed-services portfolio."
+    },
+    {
+      "id": "mathis-brothers",
+      "name": "Mathis Brothers",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "Program Governance Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud"
+      ],
+      "challenge": "Scaling digital commerce operations for a large home-furnishings retailer.",
+      "contribution": "Manages multi-stream delivery governance across the retail portfolio."
+    },
+    {
+      "id": "aosmith",
+      "name": "A.O. Smith",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "Program Governance Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud"
+      ],
+      "challenge": "Supporting a manufacturing-adjacent commerce platform through consistent delivery cadence.",
+      "contribution": "Part of the multi-stream managed-services portfolio governance model."
+    },
+    {
+      "id": "party-city",
+      "name": "Party City",
+      "industry": "Retail & Commerce",
+      "engagement": "Implementation & Managed Services",
+      "role": "Program Governance Lead",
+      "technologies": [
+        "Salesforce Commerce Cloud"
+      ],
+      "challenge": "Sustaining seasonal-peak-ready commerce delivery for a specialty retailer.",
+      "contribution": "Current client under the active Merkle managed-services portfolio."
+    },
+    {
+      "id": "redcross",
+      "name": "American Red Cross",
+      "industry": "Retail & Commerce",
+      "engagement": "SAFe Transformation Coaching",
+      "role": "Delivery Lead & SAFe Mentor",
+      "technologies": [
+        "SAFe",
+        "Agile Coaching"
+      ],
+      "challenge": "The client was mid-transition to SAFe and needed the delivery team streamlined and enabled during that shift.",
+      "contribution": "Streamlined the Merkle team during the client's SAFe transition — ran SAFe training and mentored the team on SAFe ways of working, drawing on prior consulting-era experience."
+    },
+    {
+      "id": "amex",
+      "name": "American Express",
+      "industry": "Banking & Financial Services",
+      "engagement": "Enterprise Implementation Consulting",
+      "role": "Senior Consultant",
+      "technologies": [
+        "Enterprise Platform Implementation"
+      ],
+      "challenge": "Mission-critical financial platform implementation requiring precise governance and stakeholder coordination.",
+      "contribution": "Served as consultant on enterprise implementation, customization, and adoption for the platform."
+    },
+    {
+      "id": "deutsche-bank",
+      "name": "Deutsche Bank",
+      "industry": "Banking & Financial Services",
+      "engagement": "Enterprise Implementation Consulting",
+      "role": "Senior Consultant",
+      "technologies": [
+        "Enterprise Platform Implementation"
+      ],
+      "challenge": "High-stakes banking platform delivery demanding rigorous release discipline.",
+      "contribution": "Delivered mission-critical implementation work as part of the CollabNet consulting engagement."
+    },
+    {
+      "id": "bank-of-shanghai",
+      "name": "Bank of Shanghai",
+      "industry": "Banking & Financial Services",
+      "engagement": "Enterprise Implementation Consulting",
+      "role": "Senior Consultant",
+      "technologies": [
+        "Enterprise Platform Implementation"
+      ],
+      "challenge": "Cross-border banking platform implementation with strict compliance and security needs.",
+      "contribution": "Contributed to mission-critical implementation delivery across the engagement."
+    },
+    {
+      "id": "nse",
+      "name": "National Stock Exchange",
+      "industry": "Banking & Financial Services",
+      "engagement": "Client Delivery Management",
+      "role": "Client Delivery Manager / SPOC Senior Consultant",
+      "technologies": [
+        "Enterprise Security Customization",
+        "Release Engineering"
+      ],
+      "challenge": "One of India's most mission-critical financial platforms needed nine production upgrades delivered safely across a five-year window, with security customizations specific to exchange operations.",
+      "contribution": "Planned, executed, governed, and delivered five production upgrades directly, working with engineering, QA, services, and architecture teams on add-on customizations and enhanced security. Served as sole point of contact senior consultant for the client across a nine-upgrade, five-year engagement."
+    },
+    {
+      "id": "valeo",
+      "name": "Valeo",
+      "industry": "Manufacturing & Automotive",
+      "engagement": "Program Release Management",
+      "role": "Program Release Manager",
+      "technologies": [
+        "Java",
+        "Python",
+        "AngularJS",
+        "TeamForge",
+        "Git",
+        "Subversion",
+        "Wiki",
+        "File Management System"
+      ],
+      "challenge": "Coordinating program release and QA governance across four locations and three separate organizations — spanning continents, companies, and timezones, with no shared release structure between them to start from.",
+      "phases": [
+        {
+          "label": "Phase 1 — Release Governance (Bangalore)",
+          "detail": "Owned program release and QA governance across three teams: the CollabNet team in Chennai, the partner team from Tech Mahindra in Bangalore, and client teams in Cairo and Paris. Coordinated development completion, UAT, and Go-Live across four locations, three companies, and multiple timezones."
+        },
+        {
+          "label": "Phase 2 — Enhanced Delivery (Paris)",
+          "detail": "Following Phase 1's completion, the client initiated a second phase on expanded scope. Relocated to Paris to work directly with the client team, reporting to the client's Head of Program and overseeing delivery through the enhanced scope."
+        }
+      ],
+      "result": "The engagement's successful delivery helped Valeo secure a billion-dollar deal with Audi — the client formally felicitated the team's efforts."
+    }
+  ]
+};

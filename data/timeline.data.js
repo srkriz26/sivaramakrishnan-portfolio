@@ -1,0 +1,184 @@
+// Auto-generated from timeline.json
+window.TimelineData = {
+  "companies": [
+    {
+      "id": "cognizant",
+      "name": "Cognizant",
+      "shortName": "Cognizant",
+      "period": "Aug 2007 – Jan 2010",
+      "phase": "Software Testing & Quality Assurance",
+      "role": "Quality Engineer",
+      "summary": "Built the foundation: SDLC discipline, structured testing, and release quality control — the groundwork every later governance framework was built on.",
+      "clients": [],
+      "projects": [
+        "Functional and regression testing across SDLC release cycles",
+        "Test planning, defect management, and release-readiness reviews"
+      ],
+      "skills": [
+        "SDLC",
+        "Quality Assurance",
+        "Test Planning",
+        "Release Management"
+      ],
+      "achievements": [
+        "Established early command of structured testing and release governance"
+      ]
+    },
+    {
+      "id": "patni",
+      "name": "Patni",
+      "shortName": "Patni",
+      "period": "May 2010 – Mar 2011",
+      "phase": "Software Testing & Quality Assurance",
+      "role": "Quality Engineer",
+      "summary": "Continued deepening QA and release-process expertise ahead of a move into enterprise solution delivery.",
+      "clients": [],
+      "projects": [
+        "SDLC quality assurance and testing across client engagements"
+      ],
+      "skills": [
+        "SDLC",
+        "Quality Assurance",
+        "Testing",
+        "Process Discipline"
+      ],
+      "achievements": [
+        "Rounded out a 4-year QA foundation before transitioning into delivery leadership"
+      ]
+    },
+    {
+      "id": "collabnet",
+      "name": "CollabNet",
+      "shortName": "CollabNet",
+      "period": "2011 – 2020",
+      "phase": "Enterprise Solution Delivery & Client Consulting",
+      "role": "Senior Consultant / Client Delivery Manager",
+      "summary": "Led enterprise solution implementation, customization, deployment, client consulting, training, and adoption across Banking, Manufacturing, and Automotive. This is where the governance-first playbook — RACI, SOWs, ways-of-working — was forged on mission-critical financial platforms.",
+      "clients": [
+        "Deutsche Bank",
+        "American Express",
+        "Bank of Shanghai",
+        "National Stock Exchange",
+        "Valeo"
+      ],
+      "projects": [
+        {
+          "name": "National Stock Exchange — Client Delivery Manager",
+          "detail": "Acted as SPOC senior consultant, planning, executing, governing, and delivering five production upgrades over a five-year engagement, working with engineering, QA, services, and architecture teams on add-on customizations and enhanced security tailored for NSE."
+        },
+        {
+          "name": "Valeo Engineering Systems — Program Release Manager",
+          "detail": "Coordinated releases across project teams spread across Cairo, Paris, Bengaluru, and Chennai, spanning three partner and vendor organizations. The engagement's successful delivery helped Valeo secure a billion-dollar deal with Audi; the client felicitated the team's efforts."
+        },
+        {
+          "name": "Banking & Financial Platforms",
+          "detail": "Mission-critical implementation programs for Deutsche Bank, American Express, and Bank of Shanghai."
+        }
+      ],
+      "skills": [
+        "Enterprise Implementation",
+        "Client Consulting",
+        "Release Governance",
+        "Cross-continent Coordination",
+        "Stakeholder Management"
+      ],
+      "achievements": [
+        "5 production upgrades delivered for NSE over 5 years",
+        "Coordinated a 3-organization, 4-city release program for Valeo that unlocked a $1B Audi deal",
+        "Served as SPOC senior consultant for one of India's most mission-critical financial platforms"
+      ]
+    },
+    {
+      "id": "mindtree",
+      "name": "Mindtree",
+      "shortName": "Mindtree",
+      "period": "2020 – 2022",
+      "phase": "Digital Commerce Transformation",
+      "role": "Program Manager, Digital Commerce",
+      "summary": "Managed digital commerce transformation as a pioneer project manager on a billion-dollar omni-channel Salesforce Commerce Cloud program for a major retail client — one of the 3–4 people who kickstarted the program from scratch.",
+      "clients": [
+        "Currys Retail"
+      ],
+      "projects": [
+        {
+          "name": "Billion-Dollar Omni-Channel Salesforce Commerce Cloud Program",
+          "detail": "One of the founding 3–4 people on the program: created the project charter, ran TA hiring meetings to build the team, refined high-level requirements, worked with the accounts team on the SOW, defined ways of working, and stood up reporting structures and RACI. Went on to manage 3–4 e-commerce teams as scrum-of-scrums — hosting ceremonies across all teams with client stakeholders, facilitating pre-refinement and pre-sprint planning internally, and tracking sprint and release metrics. Later led business readiness, hyper-care, and transition to support following platform launch. Also oversaw multi-cloud integration across the commerce estate — coordinating Salesforce Marketing Cloud, Service Cloud, OMS, MuleSoft, and Einstein into the platform architecture alongside the core Commerce Cloud build."
+        }
+      ],
+      "skills": [
+        "Program Kickstart",
+        "Scrum of Scrums",
+        "E-Commerce Implementation & Delivery",
+        "RACI Design",
+        "SOW Drafting",
+        "Release Planning",
+        "Business Readiness & Hypercare",
+        "Salesforce Commerce Cloud",
+        "Marketing Cloud",
+        "Service Cloud",
+        "Salesforce OMS",
+        "MuleSoft",
+        "Einstein"
+      ],
+      "achievements": [
+        "Founding project manager on a billion-dollar omni-channel commerce program",
+        "Built the program's ways-of-working, RACI, and reporting structure from zero",
+        "Ran scrum-of-scrums across 3–4 concurrent e-commerce teams",
+        "Contributed to an omni-channel experience that showed 27% higher repurchase likelihood for omni-channel shoppers",
+        "Online video shopping conversion increased by 400%",
+        "Average order value grew by 40% through assisted digital interactions"
+      ]
+    },
+    {
+      "id": "merkle",
+      "name": "Merkle (Dentsu Global Services)",
+      "shortName": "Merkle",
+      "period": "2022 – 2026",
+      "phase": "Salesforce Commerce Practice Leadership & Enterprise Delivery",
+      "role": "Senior Manager, Program & Practice Leadership",
+      "summary": "Directed Salesforce Commerce and Digital Experience delivery governance for global retail and financial services clients, while contributing to Salesforce Commerce Practice leadership — accelerator and asset initiatives, technical workshops, hiring, talent development, and certification planning across the practice. Also led AI governance within delivery, applying the same governance-first discipline to enterprise AI adoption — knowing where AI earns its cost, and where it shouldn't be used at all.",
+      "clients": [
+        "SAKS Global",
+        "Mathis Brothers",
+        "Elizabeth Arden",
+        "AO Smith",
+        "American Red Cross",
+        "Party City"
+      ],
+      "projects": [
+        {
+          "name": "Salesforce Commerce Practice Leadership",
+          "detail": "As part of Merkle's Senior Salesforce Commerce Practice leadership, contributed to practice direction and innovation — including accelerator and asset initiatives, technical workshops, hiring, talent development, and certification planning across the practice."
+        },
+        {
+          "name": "Salesforce Commerce Managed Services Portfolio",
+          "detail": "Directed program governance, executive reporting, and delivery cadence across a multi-client Salesforce Commerce managed-services portfolio — SAKS Global, Mathis Brothers, Elizabeth Arden, A.O. Smith, and Party City."
+        },
+        {
+          "name": "American Red Cross — SAFe Transition",
+          "detail": "Streamlined the Merkle team during the client's SAFe transition, enabling the team through SAFe training and mentoring on SAFe ways of working."
+        },
+        {
+          "name": "AI Governance & Solutioning",
+          "detail": "Designed reusable AI agents for Meeting Intelligence, RAID Management, Knowledge Discovery, Delivery Governance, and Project Kickstart. Contributed governance-first AI solutioning for Route Optimization (raised routing accuracy from 70% to 81%), Inventory Replenishment, Personalized Banking, and Conversational Commerce."
+        }
+      ],
+      "skills": [
+        "Salesforce Commerce Cloud",
+        "Practice Leadership & Innovation",
+        "Talent Development & Hiring",
+        "Certification Planning",
+        "Portfolio Governance",
+        "Financial Planning",
+        "SAFe Coaching",
+        "AI Governance",
+        "AI Agents"
+      ],
+      "achievements": [
+        "Contributed to Salesforce Commerce Practice direction and innovation — accelerators, technical workshops, hiring, talent development, and certification planning",
+        "Directed program governance across a multi-client Salesforce Commerce managed-services portfolio spanning five global retail brands",
+        "Improved AI-powered route optimization accuracy from 70% to 81% through governance-first AI adoption"
+      ]
+    }
+  ]
+};

@@ -1,0 +1,415 @@
+/* ============================================================
+   AI SOLUTIONS deep-dive page — consulting-grade infographics
+   ============================================================ */
+
+.ai-hero{
+  padding:150px 0 60px calc(var(--spine-w) + 48px);
+  max-width:var(--max-w);
+  margin:0 auto;
+}
+@media (max-width:900px){ .ai-hero{ padding:110px 24px 40px; } }
+.ai-hero h1{
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  color:var(--text-on-dark);
+  margin:16px 0 14px;
+}
+.ai-hero p{ color:var(--slate); max-width:640px; font-size:1.05rem; }
+
+.ai-toc{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:32px;
+}
+.ai-toc a{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding:9px 16px;
+  border:1px solid var(--line-dark);
+  border-radius:100px;
+  color:var(--slate);
+  transition:all var(--transition-fast);
+}
+.ai-toc a:hover{ color:var(--brass); border-color:var(--brass); }
+
+.case{
+  padding:100px 0;
+  border-bottom:1px solid var(--line-dark);
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding-left:calc(var(--spine-w) + 48px);
+  padding-right:48px;
+}
+@media (max-width:900px){ .case{ padding:70px 24px; } }
+
+.case-head{ margin-bottom:44px; max-width:720px; }
+.case-client{
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--burgundy-light);
+  margin-bottom:10px;
+}
+.case-title{
+  font-size:clamp(1.8rem,3.4vw,2.6rem);
+  color:var(--text-on-dark);
+  margin-bottom:12px;
+}
+.case-tagline{
+  font-style:italic;
+  color:var(--parchment);
+  font-size:1.1rem;
+}
+
+.case-narrative{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-bottom:52px;
+}
+@media (max-width:900px){ .case-narrative{ grid-template-columns:1fr; } }
+.narr-block h4{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-bottom:10px;
+}
+.narr-block p{ color:var(--text-on-dark); font-size:0.95rem; opacity:0.92; }
+
+.case-learning{
+  margin-top:48px;
+  padding:26px 28px;
+  border-left:2px solid var(--brass);
+  background:rgba(201,161,92,0.05);
+}
+.case-learning h4{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-bottom:10px;
+}
+.case-learning p{ font-style:italic; color:var(--text-on-dark); }
+
+/* ---------- Concept phase block (e.g. Delivery Ledger V1) ---------- */
+.case-concept{
+  margin-bottom:20px;
+  padding:32px 32px 28px;
+  border:1px solid var(--line-dark);
+  border-left:2px solid var(--burgundy-light);
+  border-radius:var(--radius-card);
+}
+.case-concept-label{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--burgundy-light);
+  margin-bottom:6px;
+}
+.case-concept-note{
+  font-style:italic;
+  color:var(--slate);
+  font-size:0.82rem;
+  margin-bottom:24px;
+}
+.case-concept .case-narrative{ margin-bottom:0; }
+
+.case-infographic{
+  margin:20px 0 48px;
+}
+.case-infographic img{
+  width:100%;
+  height:auto;
+  border-radius:var(--radius-card);
+  border:1px solid var(--line-dark);
+  display:block;
+}
+.case-infographic figcaption{
+  font-family:var(--font-mono);
+  font-size:0.66rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:var(--slate-dim);
+  margin-top:10px;
+}
+
+/* ---------- Flow diagram (Route Intelligence) ---------- */
+.flow-diagram{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  margin:40px 0;
+}
+.flow-node{
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  letter-spacing:0.03em;
+  padding:14px 22px;
+  border:1px solid var(--line-dark);
+  border-radius:var(--radius);
+  color:var(--text-on-dark);
+  text-align:center;
+  min-width:220px;
+  background:var(--ink-2);
+}
+.flow-node.decision{ border-color:var(--brass); color:var(--brass); }
+.flow-node.governance{ border-color:var(--burgundy-light); color:var(--burgundy-light); }
+.flow-connector{
+  width:1px;
+  height:28px;
+  background:var(--line-dark);
+}
+.flow-branch{
+  display:flex;
+  gap:60px;
+  margin:0;
+}
+@media (max-width:600px){ .flow-branch{ gap:24px; flex-direction:column; align-items:center; } }
+.flow-branch-col{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ---------- Cost optimization 3-column ---------- */
+.opt-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+  margin-top:12px;
+}
+@media (max-width:800px){ .opt-grid{ grid-template-columns:1fr; } }
+.opt-card{
+  border:1px solid var(--line-dark);
+  border-radius:var(--radius);
+  padding:24px;
+}
+.opt-card .opt-num{ font-family:var(--font-mono); color:var(--brass); font-size:0.7rem; letter-spacing:0.1em; }
+.opt-card h5{ color:var(--text-on-dark); font-size:1.05rem; margin:10px 0 8px; font-family:var(--font-display); font-weight:500; }
+.opt-card p{ color:var(--slate); font-size:0.88rem; }
+
+/* ---------- Pipeline (Inventory) ---------- */
+.pipeline{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0;
+  margin:36px 0;
+}
+.pipeline-step{
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  padding:12px 16px;
+  border:1px solid var(--line-dark);
+  border-radius:100px;
+  color:var(--text-on-dark);
+  white-space:nowrap;
+}
+.pipeline-arrow{
+  color:var(--slate-dim);
+  padding:0 10px;
+  font-size:0.9rem;
+}
+
+/* ---------- Dual architecture comparison ---------- */
+.arch-compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  margin:40px 0;
+}
+@media (max-width:800px){ .arch-compare{ grid-template-columns:1fr; } }
+.arch-col{
+  border:1px solid var(--line-dark);
+  border-radius:var(--radius);
+  padding:24px;
+}
+.arch-col.highlight{ border-color:var(--brass); background:rgba(201,161,92,0.04); }
+.arch-col h5{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-bottom:16px;
+}
+.arch-flow-item{
+  font-size:0.84rem;
+  padding:10px 0;
+  border-bottom:1px solid var(--line-dark);
+  color:var(--text-on-dark);
+}
+.arch-flow-item:last-child{ border-bottom:none; }
+.arch-note{ margin-top:16px; font-size:0.82rem; color:var(--slate); font-style:italic; }
+
+.compare-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:32px 0;
+  font-size:0.88rem;
+}
+.compare-table th, .compare-table td{
+  padding:12px 16px;
+  border-bottom:1px solid var(--line-dark);
+  text-align:left;
+}
+.compare-table th{
+  font-family:var(--font-mono);
+  font-size:0.66rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--brass);
+}
+.compare-table td:nth-child(2){ color:var(--slate); }
+.compare-table td:nth-child(3){ color:var(--text-on-dark); }
+
+/* ---------- Phone mockup (Shopper Assistant) ---------- */
+.phone-wrap{
+  display:flex;
+  justify-content:center;
+  margin:44px 0;
+}
+.phone{
+  width:300px;
+  border-radius:34px;
+  border:8px solid #2A2E38;
+  background:var(--ink-2);
+  padding:18px 14px 24px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.4);
+}
+.phone-notch{
+  width:60px; height:6px;
+  background:#2A2E38;
+  border-radius:4px;
+  margin:0 auto 16px;
+}
+.phone-screen{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-height:380px;
+}
+.phone-msg{
+  max-width:80%;
+  padding:11px 15px;
+  border-radius:14px;
+  font-size:0.82rem;
+  line-height:1.4;
+}
+.phone-msg.user{
+  align-self:flex-end;
+  background:var(--brass);
+  color:var(--ink);
+  border-bottom-right-radius:4px;
+}
+.phone-msg.agent{
+  align-self:flex-start;
+  background:var(--parchment);
+  color:var(--ink);
+  border-bottom-left-radius:4px;
+  font-family:var(--font-mono);
+  font-size:0.7rem;
+}
+.phone-msg.system{
+  align-self:flex-start;
+  background:transparent;
+  border:1px solid var(--line-dark);
+  color:var(--slate);
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+}
+
+/* ---------- Agent dashboard (PM Agents) ---------- */
+.dashboard{
+  border:1px solid var(--line-dark);
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin:36px 0;
+}
+.dashboard-head{
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  padding:16px 22px;
+  border-bottom:1px solid var(--line-dark);
+  background:var(--ink-2);
+}
+.agent-list{ display:grid; grid-template-columns:repeat(2,1fr); }
+@media (max-width:700px){ .agent-list{ grid-template-columns:1fr; } }
+.agent-tile{
+  padding:22px;
+  border-bottom:1px solid var(--line-dark);
+  border-right:1px solid var(--line-dark);
+  cursor:pointer;
+}
+.agent-tile:nth-child(2n){ border-right:none; }
+.agent-tile h5{ color:var(--text-on-dark); font-size:1rem; font-family:var(--font-display); font-weight:500; margin-bottom:6px; }
+.agent-tile .agent-hint{ font-family:var(--font-mono); font-size:0.66rem; color:var(--slate-dim); text-transform:uppercase; letter-spacing:0.06em; }
+.agent-detail{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 350ms ease;
+}
+.agent-tile.open .agent-detail{ max-height:400px; margin-top:14px; }
+.agent-detail-field{ margin-bottom:10px; }
+.agent-detail-field h6{
+  font-family:var(--font-mono);
+  font-size:0.62rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--burgundy-light);
+  margin-bottom:3px;
+}
+.agent-detail-field p{ font-size:0.82rem; color:var(--slate); }
+.agent-also{
+  padding:18px 22px;
+  font-size:0.82rem;
+  color:var(--slate);
+  font-style:italic;
+  border-top:1px solid var(--line-dark);
+}
+
+/* ---------- Architecture list (Financial Recommendation) ---------- */
+.arch-strip{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin:32px 0;
+}
+.arch-chip{
+  font-family:var(--font-mono);
+  font-size:0.75rem;
+  padding:12px 18px;
+  border:1px solid var(--brass);
+  color:var(--brass);
+  border-radius:100px;
+}
+.arch-chip::before{ content:'⬡ '; }
+
+/* Back to top nav for this page */
+.ai-nav-back{
+  position:fixed;
+  top:20px; right:24px;
+  z-index:210;
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--text-on-dark);
+  background:rgba(18,21,28,0.75);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--line-dark);
+  padding:10px 16px;
+  border-radius:100px;
+}
+.ai-nav-back:hover{ border-color:var(--brass); color:var(--brass); }
