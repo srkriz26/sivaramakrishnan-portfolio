@@ -89,6 +89,31 @@ window.TimelineData = {
       ]
     },
     {
+      "id": "salesforce-startup-2020",
+      "name": "Salesforce Startup (Confidential)",
+      "shortName": "Salesforce Startup",
+      "period": "Jul 2020 – Nov 2020",
+      "phase": "Agile Delivery & PMO Consulting",
+      "role": "Consultant Scrum Master, PMO",
+      "summary": "Partnered directly with the CTO of an early-stage Salesforce product startup to establish a product release cadence, implement Agile delivery practices, and streamline process and tooling during a focused four-month engagement.",
+      "projects": [
+        {
+          "name": "Release Cadence & Agile Delivery Setup",
+          "detail": "Worked directly with the CTO to establish a product release cadence, introduce Agile ceremonies and ways-of-working, and streamline delivery process and tooling, including JIRA configuration and workflow design."
+        }
+      ],
+      "skills": [
+        "Scrum Mastery",
+        "Agile Delivery",
+        "PMO",
+        "JIRA",
+        "Release Cadence"
+      ],
+      "achievements": [
+        "Established product release cadence and Agile delivery practices for a Salesforce product startup, partnering directly with the CTO."
+      ]
+    },
+    {
       "id": "mindtree",
       "name": "Mindtree",
       "shortName": "Mindtree",
