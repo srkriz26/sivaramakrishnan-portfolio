@@ -115,70 +115,110 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:500; letter-spacing:-0
 }
 
 /* ============================================================
-   SPINE — left nav rail (the dossier binding)
+   DOCK — desktop navigation
+   A bar of section cards at the top-left. Expanded at the top of
+   the page; folds into the launcher icon on scroll; unfolds when
+   the icon is hovered or clicked. Card positions (--x), the bar
+   width (--dock-w) and the overlap when space runs out are set by
+   js/navigation.js.
    ============================================================ */
-.spine{
+
+/* The old left rail is gone, so this page no longer reserves a gutter
+   for it. Scoped to siblings of .dock so the AI Solutions page, which
+   has no dock, keeps its layout. */
+.dock ~ main, .dock ~ footer{ --spine-w: 0px; }
+
+.dock{
+  --dock-ease: cubic-bezier(.4,0,.2,1);
+  display:none;                      /* shown on desktop only — see media query below */
   position:fixed;
-  left:0; top:0; bottom:0;
-  width:var(--spine-w);
-  background:var(--ink-2);
-  border-right:1px solid var(--line-dark);
+  top:14px; left:16px;
   z-index:200;
-  display:flex;
-  flex-direction:column;
   align-items:center;
-  padding:28px 0;
+  padding:5px;
+  background:rgba(18,21,28,0.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--line-dark);
+  border-radius:10px;
+  box-shadow:0 12px 30px -14px rgba(0,0,0,0.8);
 }
-.spine-mark{
-  font-family:var(--font-display);
-  font-size:1.1rem;
+.dock-toggle{
+  display:flex;
+  align-items:center;
+  height:36px;
+  border-radius:6px;
   color:var(--brass);
-  writing-mode:vertical-rl;
-  letter-spacing:0.06em;
-  margin-bottom:40px;
+  transition:background var(--transition-fast);
 }
-.spine-nav{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:2px;
-}
-.spine-link{
-  writing-mode:vertical-rl;
-  text-orientation:mixed;
+.dock-toggle:hover{ background:rgba(242,239,230,0.06); }
+.dock-toggle:focus-visible, .dock-card:focus-visible{ outline:1px solid var(--brass); outline-offset:1px; }
+.dock-icon{ width:36px; height:36px; display:grid; place-items:center; flex:none; }
+.dock-icon svg{ width:16px; height:16px; fill:currentColor; }
+.dock-current{
   font-family:var(--font-mono);
-  font-size:0.68rem;
+  font-size:0.72rem;
   letter-spacing:0.12em;
-  color:var(--slate-dim);
-  padding:14px 0;
+  color:var(--text-on-dark);
+  white-space:nowrap;
+  overflow:hidden;
+  max-width:240px;
+  padding-right:12px;
+  transition:max-width 360ms var(--dock-ease), padding 360ms var(--dock-ease), opacity 200ms linear;
+}
+.dock-current .num{ color:var(--brass); }
+.dock-current .num::after{ content:'\2014'; color:var(--slate-dim); margin:0 8px; }
+.dock.open .dock-current{ max-width:0; padding-right:0; opacity:0; }
+
+.dock-cards{
   position:relative;
-  transition:color var(--transition-fast);
+  width:0;
+  height:36px;
+  overflow:hidden;
+  visibility:hidden;
+  transition:width 360ms var(--dock-ease), margin 360ms var(--dock-ease), visibility 0s linear 360ms;
+}
+.dock.open .dock-cards{
+  width:var(--dock-w, 0px);
+  margin-left:6px;
+  visibility:visible;
+  transition:width 360ms var(--dock-ease), margin 360ms var(--dock-ease), visibility 0s;
+}
+.dock-card{
+  position:absolute;
+  left:0; top:0;
+  height:36px;
   display:flex;
   align-items:center;
-  gap:8px;
-}
-.spine-link .num{ color:var(--slate-dim); font-size:0.62rem; transition:color var(--transition-fast); }
-.spine-link::before{
-  content:'';
-  width:1px; height:0;
-  background:var(--brass);
-  transition:height var(--transition-med);
-}
-.spine-link:hover{ color:var(--text-on-dark); }
-.spine-link.active{ color:var(--brass); }
-.spine-link.active .num{ color:var(--brass); }
-.spine-link.active::before{ height:22px; }
-
-.spine-foot{
+  padding:0 14px;
   font-family:var(--font-mono);
-  font-size:0.62rem;
-  color:var(--slate-dim);
-  writing-mode:vertical-rl;
-  letter-spacing:0.08em;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  white-space:nowrap;
+  color:var(--slate);
+  background:var(--ink-2);
+  border:1px solid var(--line-dark);
+  border-radius:6px;
+  box-shadow:-8px 0 12px -8px rgba(0,0,0,0.85);   /* reads as "lying on the card before it" */
+  transform:translateX(var(--x, 0px));
+  clip-path:inset(-12px var(--cut, -12px) -12px -12px);
+  opacity:0;
+  /* folding: cards fade quickly while they gather toward the icon */
+  transition:transform 300ms var(--dock-ease), clip-path 300ms var(--dock-ease), opacity 140ms linear,
+             color var(--transition-fast), border-color var(--transition-fast);
 }
+.dock.open .dock-card{
+  opacity:1;
+  /* unfolding: cards appear a beat after the bar starts to widen */
+  transition:transform 300ms var(--dock-ease), clip-path 300ms var(--dock-ease), opacity 240ms linear 70ms,
+             color var(--transition-fast), border-color var(--transition-fast);
+}
+.dock-card .num{ font-size:0.62rem; margin-right:8px; color:var(--slate-dim); transition:color var(--transition-fast); }
+.dock-card:hover, .dock-card:focus-visible{ color:var(--text-on-dark); border-color:rgba(242,239,230,0.28); }
+.dock-card.active{ color:var(--brass); border-color:rgba(201,161,92,0.5); }
+.dock-card.active .num{ color:var(--brass); }
 
-/* Mobile top nav */
+/* Top bar + MENU — phones and tablets */
 .topnav{
   display:none;
   position:fixed;
@@ -216,10 +256,20 @@ h1,h2,h3,h4{ font-family:var(--font-display); font-weight:500; letter-spacing:-0
 .topnav-menu a.active{ color:var(--brass); }
 
 @media (max-width:900px){
-  .spine{ display:none; }
   .topnav{ display:flex; }
   .section-inner{ padding-left:24px; padding-right:24px; }
   body{ padding-top:56px; }
+}
+/* Wider screens without a mouse (tablets in landscape) keep the top bar
+   and MENU; only devices with a mouse get the dock. */
+@media (min-width:901px){
+  .topnav{ display:flex; }
+  .topnav ~ main{ margin-top:56px; }
+}
+@media (min-width:901px) and (hover:hover) and (pointer:fine){
+  .topnav, .topnav-menu, .topnav-menu.open{ display:none; }
+  .topnav ~ main{ margin-top:0; }
+  .dock{ display:flex; }
 }
 
 /* ============================================================
