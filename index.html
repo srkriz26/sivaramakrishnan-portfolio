@@ -37,24 +37,28 @@
 </head>
 <body>
 
-<!-- ================= SPINE NAV (desktop) ================= -->
-<nav class="spine">
-  <div class="spine-mark">S.SANKAR</div>
-  <div class="spine-nav">
-    <a class="spine-link" data-target="home"><span class="num">01</span>Home</a>
-    <a class="spine-link" data-target="career"><span class="num">02</span>Career</a>
-    <a class="spine-link" data-target="clients"><span class="num">03</span>Clients</a>
-    <a class="spine-link" data-target="highlights"><span class="num">04</span>Projects</a>
-    <a class="spine-link" data-target="ai-solutions"><span class="num">05</span>AI Solutions</a>
-    <a class="spine-link" data-target="leadership"><span class="num">06</span>Leadership</a>
-    <a class="spine-link" data-target="technology"><span class="num">07</span>Technology</a>
-    <a class="spine-link" data-target="looking-for"><span class="num">08</span>Looking For</a>
-    <a class="spine-link" data-target="contact"><span class="num">09</span>Contact</a>
+<!-- ================= DOCK NAV (desktop) =================
+     Starts expanded at the top of the page, folds into the launcher icon on
+     scroll, and unfolds again when the icon is hovered or clicked. -->
+<nav class="dock" aria-label="Sections">
+  <button class="dock-toggle" type="button" aria-expanded="false" aria-controls="dock-cards" aria-label="Sections menu">
+    <span class="dock-icon"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="3" cy="3" r="1.7"/><circle cx="9" cy="3" r="1.7"/><circle cx="15" cy="3" r="1.7"/><circle cx="3" cy="9" r="1.7"/><circle cx="9" cy="9" r="1.7"/><circle cx="15" cy="9" r="1.7"/><circle cx="3" cy="15" r="1.7"/><circle cx="9" cy="15" r="1.7"/><circle cx="15" cy="15" r="1.7"/></svg></span>
+    <span class="dock-current" aria-hidden="true"><span class="num">01</span>Home</span>
+  </button>
+  <div class="dock-cards" id="dock-cards">
+    <a class="dock-card" href="#home" data-target="home"><span class="num">01</span>Home</a>
+    <a class="dock-card" href="#career" data-target="career"><span class="num">02</span>Career</a>
+    <a class="dock-card" href="#clients" data-target="clients"><span class="num">03</span>Clients</a>
+    <a class="dock-card" href="#highlights" data-target="highlights"><span class="num">04</span>Projects</a>
+    <a class="dock-card" href="#ai-solutions" data-target="ai-solutions"><span class="num">05</span>AI Solutions</a>
+    <a class="dock-card" href="#leadership" data-target="leadership"><span class="num">06</span>Leadership</a>
+    <a class="dock-card" href="#technology" data-target="technology"><span class="num">07</span>Technology</a>
+    <a class="dock-card" href="#looking-for" data-target="looking-for"><span class="num">08</span>Looking For</a>
+    <a class="dock-card" href="#contact" data-target="contact"><span class="num">09</span>Contact</a>
   </div>
-  <div class="spine-foot">DOSSIER / 2026</div>
 </nav>
 
-<!-- ================= TOP NAV (mobile) ================= -->
+<!-- ================= TOP NAV (phones and tablets) ================= -->
 <div class="topnav">
   <span class="topnav-name">S. Sankar</span>
   <button class="topnav-toggle">MENU</button>
